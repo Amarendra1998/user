@@ -50,12 +50,12 @@ import id.zelory.compressor.Compressor;
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class Main2Activity extends AppCompatActivity {
+    ProgressDialog mprogressDialog;
     private TextInputEditText mname,email,confirmpass,pass,mstatus;
     private Button register;
     private DatabaseReference muserdatabase;
     private TextView textView;
     private FirebaseAuth firebaseAuth;
-    ProgressDialog mprogressDialog;
     private FirebaseUser mcurrentuser;
 
     public Main2Activity() {

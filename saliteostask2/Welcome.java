@@ -84,6 +84,28 @@ public class Welcome extends AppCompatActivity {
         mUserlist.setAdapter(firebaseRecyclerAdapter);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.mine, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id==R.id.log){
+            Intent m = new Intent(Welcome.this,Main2Activity.class);
+            startActivity(m);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     public static class UsersViewHolder extends RecyclerView.ViewHolder{
         View mview;
         public UsersViewHolder(View itemView){
@@ -110,27 +132,6 @@ public class Welcome extends AppCompatActivity {
             TextView useremail = (TextView)mview.findViewById(R.id.textView4);
             useremail.setText("Your Email:"+email);
         }
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mine, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (id==R.id.log){
-            Intent m = new Intent(Welcome.this,Main2Activity.class);
-            startActivity(m);
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 

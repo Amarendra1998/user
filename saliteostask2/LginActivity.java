@@ -23,10 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 public class LginActivity extends AppCompatActivity {
+    ProgressDialog mprogressDialog;
     private TextInputEditText email,pass;
     private Button logbtn;
     private FirebaseAuth firebaseAuth;
-    ProgressDialog mprogressDialog;
     private DatabaseReference muserdatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
